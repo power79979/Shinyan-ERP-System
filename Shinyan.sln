@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Shinyan", "E:\我的文件\Visual Studio 2015\Shinyan\", "{E271006F-101F-46C9-9BCE-18DD1694783C}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_54619"
+		Debug.AspNetCompiler.PhysicalPath = "E:\我的文件\Visual Studio 2015\Shinyan\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54619\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_54619"
+		Release.AspNetCompiler.PhysicalPath = "E:\我的文件\Visual Studio 2015\Shinyan\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54619\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "54619"
+		SlnRelativePath = "E:\我的文件\Visual Studio 2015\Shinyan\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E271006F-101F-46C9-9BCE-18DD1694783C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E271006F-101F-46C9-9BCE-18DD1694783C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
