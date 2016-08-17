@@ -36,13 +36,13 @@
 
     <div id="wrapper">       
         <!--#include file="/partials/_sidebar.aspx"-->
-
+         
         <!-- Page Content -->
         <div id="page-content-wrapper">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        
+                       
                         <!-- 訊息列 -->
                         <div class="row">
                             <div>
