@@ -30,6 +30,23 @@
 
     <script src="js/product.js"></script>
 
+    <style>
+        select { 
+            width: 100%; 
+            text-align:center; 
+            margin-bottom: 10px;
+            text-indent: 5px; 
+            padding: 3px;
+        }
+        select .lt 
+        { 
+            text-align:center; 
+        }
+        .well{
+            height: 220px;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -67,15 +84,14 @@
                                                 <span id="search_concept">品名</span> <span class="caret"></span>
                                             </button>
                                             <ul class="dropdown-menu" role="menu">
-                                                <li><a href="#contains">品名</a></li>
-                                                <li><a href="#contains">廠牌</a></li>
-                                                <li><a href="#its_equal">SKU</a></li>
-                                                <li><a href="#greather_than">產品類型</a></li>
-                                                <li><a href="#less_than">銷售狀態</a></li>
+                                                <li><a href="#name">品名</a></li>
+                                                <li><a href="#brand">廠牌</a></li>
+                                                <li><a href="#sku">SKU</a></li>
+                                                <li><a href="#category">產品類型</a></li>
                                             </ul>
                                         </div>
-                                        <input type="hidden" name="search_param" value="all" id="search_param">
-                                        <input type="text" class="form-control" name="x" placeholder="Search term...">
+                                        <input type="hidden" name="search_param" value="all" id="search_param"/>
+                                        <input type="text" class="form-control" name="x" placeholder="關鍵字"/>
                                         <span class="input-group-btn">
                                             <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-search"></span>搜尋</button>
                                         </span>
@@ -86,23 +102,52 @@
                             <!-- 進階搜尋 -->
                             <button class="btn btn-link" data-toggle="collapse" data-target="#advanced-search">進階搜尋</button>
 
-                            <div id="advanced-search" class="collapse">
-                                <br />                                 
+                            <div id="advanced-search" class="collapse">                            
                                 <form>
-                                    <div class="form-group col-lg-2">
-                                        <label>規格</label>
-                                        <input class="form-control">
+                                    <div class="form-group col-lg-4 well">
+                                        <label>進貨日期</label><br />
+                                        從<input type="date" class="form-control"/>
+                                        到<input type="date" class="form-control"/>
+                                    </div>
+                                    <div class="form-group col-lg-4 well">
+                                        <label>分類</label><br />
+                                        <select>
+                                            <option>大類</option>
+                                            <option>s</option>
+                                            <option>s</option>
+                                        </select>
+                                        <br />
+                                        <select>
+                                            <option>中類</option>
+                                            <option>s</option>
+                                            <option>s</option>
+                                        </select>
+                                        <br />
+                                        <select>
+                                            <option>小類</option>
+                                            <option>s</option>
+                                            <option>s</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-lg-4 well">
+                                        銷售狀態
+                                        <select>
+                                            <option></option>
+                                            <option>上架</option>
+                                            <option>下架</option>
+                                        </select>
+                                        規格
+                                        <input class="form-control"/>
+                                        顏色
+                                        <input class="form-control"/>
                                     </div>
                                     <div class="form-group col-lg-2">
-                                        <label>顏色</label>
-                                        <input class="form-control">
+                                        
                                     </div>
                                     <div class="form-group col-lg-2">
-                                        <label>進貨日期</label>
-                                        <input type="date" class="form-control">
+                                        
                                     </div>
                                 </form>
-                                <br/>
                             </div>
 
                         </div>
