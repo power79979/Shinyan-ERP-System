@@ -1,6 +1,8 @@
 create database shinyan
 use shinyan
 
+#庫存系統
+
 #drop table product
 CREATE TABLE `shinyan`.`product` (
   `p_id` NVARCHAR(20) NOT NULL, 	# '商品代碼, SKU',
@@ -29,7 +31,7 @@ CREATE TABLE `shinyan`.`product` (
   UNIQUE INDEX `p_id_UNIQUE` (`p_id` ASC),
   FOREIGN KEY(category_id) REFERENCES category(c_id)
   ON DELETE SET NULL
-  );
+);
   
 #  select * from product
   
@@ -47,7 +49,7 @@ CREATE TABLE `shinyan`.`stock_change` (
   PRIMARY KEY (`s_id`),
   FOREIGN KEY (`p_id`) REFERENCES `shinyan`.`product` (`p_id`)
   ON DELETE CASCADE
-  );
+);
     
   select * from stock_change
   
@@ -57,7 +59,7 @@ CREATE TABLE `shinyan`.`category` (
     `category_l` NVARCHAR(20), 	 	# '分類 大項',
 	`category_m` NVARCHAR(20), 	 	# '分類 中項',
 	`category_s` NVARCHAR(20) 	 	# '分類 小項',	
-	);
+);
     
     
 #drop table combined_product
@@ -65,7 +67,7 @@ CREATE TABLE `shinyan`.`combined_product` (
 	`cp_id` NVARCHAR(20) PRIMARY KEY, #pk 商品編號 SKU
 	`category_id` INT,				#  分類	
 	`name` NVARCHAR(200) 	 		# '品名',	    
-	);   
+);   
     
 #drop table com_prod_detail
 CREATE TABLE `shinyan`.`com_prod_detail` (
@@ -76,4 +78,7 @@ CREATE TABLE `shinyan`.`com_prod_detail` (
     FOREIGN KEY(cp_id) REFERENCES combined_product(cp_id),
 	FOREIGN KEY(p_id) REFERENCES product(p_id)
 	ON DELETE CASCADE
-	);   
+);   
+    
+#訂單系統
+
