@@ -43,7 +43,7 @@
             text-align:center; 
         }
         .well {
-            min-height: 220px;
+            height: 320px;
         }
         .auto-style1       
         {
@@ -102,10 +102,10 @@
                                                 <span id="search_concept">訂單編號</span> <span class="caret"></span>
                                             </button>
                                             <ul class="dropdown-menu" role="menu">
-                                                <li><a href="#name">客戶帳號</a></li>
-                                                <li><a href="#brand">商品名稱</a></li>
-                                                <li><a href="#sku">Ebay帳號</a></li>
-                                                <li><a href="#category">客戶姓名</a></li>
+                                                <li><a href="#name">客戶帳號</a></li>                                               
+                                                <li><a href="#brand">出貨編號</a></li>
+                                                <li><a href="#brand">Transaction ID:</a></li>
+                                                
                                             </ul>
                                         </div>
                                         <input type="hidden" name="search_param" value="all" id="search_param"/>
@@ -130,43 +130,46 @@
                                         到<input type="date" class="form-control"/>
                                     </div>
                                     <div class="form-group col-lg-4 well">
-                                        <label>分類</label><br />
+                                        <label>物流配送方式</label><br />
                                         <select>
-                                            <option>大類</option>
-                                            <option>s</option>
-                                            <option>s</option>
-                                        </select>
-                                        <br />
+                                            <option>EMS</option>
+                                            <option>FEDEX</option>
+                                            <option>DHL</option>
+                                            <option>掛號小包</option>
+                                            <option>國際包裹</option>
+                                            <option>TNT</option>
+                                            <option>7-11</option>
+                                            <option>全家取貨付款</option>
+                                            <option>郵局快捷</option>
+                                            <option>USPS美國郵政</option>
+                                            <option>其他</option>
+                                        </select><br />
+                                        <label>EBAY帳號</label><br />
                                         <select>
-                                            <option>中類</option>
-                                            <option>s</option>
-                                            <option>s</option>
-                                        </select>
-                                        <br />
+                                            <option>ABBS1005</option>
+                                            <option>jAck3310</option>
+                                            <option>AntiMan</option>
+                                            <option>Hello World</option>                                                                                    
+                                        </select><br /><br />
+                                         <label>合併訂單</label><br />
                                         <select>
-                                            <option>小類</option>
-                                            <option>s</option>
-                                            <option>s</option>
-                                        </select>
+                                            <option>已合併訂單</option>
+                                            <option>合併成的新訂單</option>                                                                                                                         
+                                        </select><br />
+                                       
                                     </div>
                                     <div class="form-group col-lg-4 well">
-                                        銷售狀態
-                                        <select>
-                                            <option></option>
-                                            <option>上架</option>
-                                            <option>下架</option>
-                                        </select>
-                                        規格
-                                        <input class="form-control"/>
-                                        顏色
-                                        <input class="form-control"/>
-                                    </div>
-                                    <div class="form-group col-lg-2">
-                                        
-                                    </div>
-                                    <div class="form-group col-lg-2">
-                                        
-                                    </div>
+                                        <label>運費:</label><br />
+                                      <input type="text" /><br /><br />                                       
+                                        <label>商品名稱:</label><br />
+                                      <input type="text" /><br /><br />
+                                      <label>客戶姓名:</label><br />
+                                      <input type="text" /><br /><br /><br />
+                                    
+                                   
+                               </div>
+                                
+                         
                             </div>
 
                         </div>
@@ -210,7 +213,7 @@
                                         </td>
                                         <td class="auto-style1">541</td>
                                         <td class="auto-style1">EF0730N0031</td>
-                                        <td class="auto-style1">&nbsp;AnitMAN&nbsp;</td>
+                                        <td class="auto-style1">&nbsp;AntMAN&nbsp;</td>
                                         <td class="auto-style1">ironMan</td>
                                         <td class="auto-style1">2016-07-29</td>
                                         <td class="auto-style1">2016-08-01</td>
@@ -235,7 +238,7 @@
                                         </td>
                                         <td class="auto-style1">541</td>
                                         <td class="auto-style1">EF0730N0031</td>
-                                        <td class="auto-style1">&nbsp;AnitMAN&nbsp;</td>
+                                        <td class="auto-style1">&nbsp;AntMAN&nbsp;</td>
                                         <td class="auto-style1">ironMan</td>
                                         <td class="auto-style1">2016-07-29</td>
                                         <td class="auto-style1">2016-08-01</td>

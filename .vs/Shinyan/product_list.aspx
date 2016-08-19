@@ -18,6 +18,7 @@
 
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/advanced-search-bar.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -27,7 +28,20 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script src="js/product.js"></script>
+
     <style>
+        select { 
+            width: 100%; 
+            text-align:center; 
+            margin-bottom: 10px;
+            text-indent: 5px; 
+            padding: 3px;
+        }
+        select .lt 
+        { 
+            text-align:center; 
+        }
         .well{
             height: 220px;
         }
@@ -39,13 +53,13 @@
 
     <div id="wrapper">       
         <!--#include file="/partials/_sidebar.aspx"-->
-         
+
         <!-- Page Content -->
         <div id="page-content-wrapper">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                       
+                        
                         <!-- 訊息列 -->
                         <div class="row">
                             <div>
@@ -88,8 +102,8 @@
                             <!-- 進階搜尋 -->
                             <button class="btn btn-link" data-toggle="collapse" data-target="#advanced-search">進階搜尋</button>
 
-                            <div id="advanced-search" class="collapse">      
-                                <form class="container">
+                            <div id="advanced-search" class="collapse">                            
+                                <form>
                                     <div class="form-group col-lg-4 well">
                                         <label>進貨日期</label><br />
                                         從<input type="date" class="form-control"/>
@@ -135,6 +149,7 @@
                                     </div>
                                 </form>
                             </div>
+
                         </div>
                         <!--搜尋列結束-->
 
