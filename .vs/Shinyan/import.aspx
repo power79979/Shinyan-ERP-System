@@ -85,7 +85,7 @@
                                             </div>                                            
                                             <div class="form-group col-lg-4">
                                                 <label for="inputdefault">日期</label>
-                                                <input class="form-control" readonly value="2016-08-19"/>
+                                                <input class="form-control" readonly value="<% Response.Write(DateTime.Now.ToShortDateString()); %>"/>
                                             </div>
                                             <div class="form-group col-lg-4">
                                                 <label for="inputdefault">庫存數</label>
@@ -120,8 +120,8 @@
                                                 <input class="form-control" />
                                             </div>
                                             <div class="form-group col-lg-2">
-                                                <input type="submit" value="送出" class="btn btn-lg btn-primary btn-margin" />
-                                                <input type="submit" value="送出" class="btn btn-lg btn-primary btn-right" />
+                                                <input type="submit" value="進貨" class="btn btn-lg btn-primary btn-margin" />
+                                                <input type="submit" value="轉倉" class="btn btn-lg btn-primary btn-right" />
                                             </div>
                                         </td>
                                     </tr>

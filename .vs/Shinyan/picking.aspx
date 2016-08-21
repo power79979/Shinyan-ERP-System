@@ -120,7 +120,7 @@
                             <!-- 進階搜尋 -->
                             <button class="btn btn-link" data-toggle="collapse" data-target="#advanced-search">進階搜尋</button>
 
-                            <div id="advanced-search" class="collapse">                            
+                            <div id="advanced-search" class="collapse container">                            
                                     <div class="form-group col-lg-4 well">
                                         <label>進貨日期:</label><br />
                                         從<input type="date" class="form-control"/>

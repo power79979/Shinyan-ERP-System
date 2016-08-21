@@ -26,3 +26,12 @@ select .lt {
 .clickable {
     cursor: pointer;
 }
+
+.btn-margin {
+    margin-top:22px;
+}
+.btn-right {
+    margin-top:22px;
+    position:absolute;
+    right:0;
+}

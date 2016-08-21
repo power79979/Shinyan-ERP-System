@@ -18,7 +18,6 @@
 
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
-    <link href="css/advanced-search-bar.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -28,7 +27,6 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <script src="js/product.js"></script>
 
     <style>
         select { 
@@ -69,7 +67,7 @@
                                 </div>
                             </div>
                         </div>
-                      
+
                         <!-- 搜尋 -->
                         <div class="row panel panel-primary">
                             <div class="panel-heading">
@@ -103,7 +101,8 @@
                             <button class="btn btn-link" data-toggle="collapse" data-target="#advanced-search">進階搜尋</button>
 
                             <div id="advanced-search" class="collapse">                            
-                                <form>
+                                <div class="container">
+                                    <form>
                                     <div class="form-group col-lg-4 well">
                                         <label>進貨日期</label><br />
                                         從<input type="date" class="form-control"/>
@@ -148,6 +147,7 @@
                                         
                                     </div>
                                 </form>
+                                </div>
                             </div>
 
                         </div>
@@ -168,51 +168,14 @@
                                             <th class="text-center">Action</th>
                                         </tr>
                                     </thead>
-                                    <tr>
-                                        <td>B03EA70000001BL</td>
-                                        <td>NEW EASTON EA70 +/- 6 DEGREE ROAD STEM(100 MM TRAVEL)</td>
-                                        <td>未對應分類</td>
-                                        <td>0 USD</td>
-                                        <td>500</td>
-                                        <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> 編輯</a> <a href="#" onclick="Selectimport()" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-import"></span> 進貨</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>B03EA70000001BL</td>
-                                        <td>NEW EASTON EA70 +/- 6 DEGREE ROAD STEM(100 MM TRAVEL)</td>
-                                        <td>未對應分類</td>
-                                        <td>0 USD</td>
-                                        <td>500</td>
-                                        <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> 編輯</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-import"></span> 進貨</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>B03EA70000001BL</td>
-                                        <td>NEW EASTON EA70 +/- 6 DEGREE ROAD STEM(100 MM TRAVEL)</td>
-                                        <td>未對應分類</td>
-                                        <td>0 USD</td>
-                                        <td>500</td>
-                                        <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> 編輯</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-import"></span> 進貨</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>B03EA70000001BL</td>
-                                        <td>NEW EASTON EA70 +/- 6 DEGREE ROAD STEM(100 MM TRAVEL)</td>
-                                        <td>未對應分類</td>
-                                        <td>0 USD</td>
-                                        <td>500</td>
-                                        <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> 編輯</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-import"></span> 進貨</a></td>
-                                    </tr>
+                                    <% printProductList(); %>
                                 </table>
                             </div>
                         </div>
                         <!-- 列表結束 -->
                         <!-- 分頁 -->
                         <div class="row">
-                            <ul class="pagination">
-                                <li><a href="#">1</a></li>
-                                <li class="active"><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                            </ul>
+                            <% PrintPagination(); %>
                         </div>
                         <!-- 分頁結束 -->
                     </div>
@@ -257,8 +220,8 @@
         });
 
         /*開啟進貨頁*/
-        function Selectimport() {
-            window.open('import.html', '_blank', 'toolbar=no,scrollbars=yes,resizeable=no,width=1000,height=850,screenX=100,screenY=100');
+        function Selectimport(id) {
+            window.open('import.aspx?id='+id, '_blank', 'toolbar=no,scrollbars=yes,resizeable=no,width=1400,height=850,screenX=100,screenY=100');
         }
     </script> 
 

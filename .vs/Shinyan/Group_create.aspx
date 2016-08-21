@@ -143,7 +143,7 @@
                             </div>
 
                             <div class="panel-body">
-                                <table class="table table-striped custab">
+                                <table class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
 
