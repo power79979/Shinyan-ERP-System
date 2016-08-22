@@ -18,7 +18,7 @@
 
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
-    <link href="css/advanced-search-bar.css" rel="stylesheet">
+    
     <link href="css/custom.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -28,7 +28,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <script src="js/product.js"></script>
+   
 
     <style>       
         .title-col {
@@ -143,7 +143,7 @@
                             </div>
 
                             <div class="panel-body">
-                                <table class="table table-bordered table-striped">
+                                <table class="table table-bordered table-striped" id="down">
                                     <thead>
                                         <tr>
 
@@ -155,27 +155,22 @@
                                         </tr>
                                     </thead>
                                     <tr>
-                                        <td>B03EA70000001BL<a href="#"><span class="glyphicon glyphicon-plus"></span></a></td>
+                                        <td>B03EA70000001BL<a href="#" onclick="Choose()"><span class="glyphicon glyphicon-plus"></span></a></td>
                                         <td>NEW EASTON EA70 +/- 6 DEGREE ROAD STEM(100 MM TRAVEL)</td>
                                         <td>
                                              <input type="number" name="" class="form-control" /></td>
                                         <td><a href="#"><span class="glyphicon glyphicon-trash" ></span></a></td>
 
                                     </tr>
-                                    <tr>
-                                        <td>B03EA70000001BL<a href="#"><span class="glyphicon glyphicon-plus"></span></a></td>
-                                        <td>NEW EASTON EA70 +/- 6 DEGREE ROAD STEM(100 MM TRAVEL)</td>
-                                        <td>
-                                            <input type="number" name="" class="form-control" /></td>
-                                        <td><a href="#"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></td>
-
-                                    </tr>
 
                                 </table>
+                                   <button class="btn-group-justified" id="add">新增一筆 </button>
                             </div>
                         </div>
+
                             <div class="row" align="center">
                                 <input type="submit" value="送出" class="btn btn-primary btn-lg" />
+                                
                             </div>
 
                      </form>
@@ -222,10 +217,22 @@
                         $('.input-group #search_param').val(param);
                     });
                 });
+                /*add column*/
+                $("#add").click(function (event) {
+                    event.preventDefault();
+                    $("#down").append("<tr>" +
+                                    "<td>Bbbbbbbbbb<a href=\"#\"><span class=\"glyphicon glyphicon-plus\"></span></a></td>" +
+                                    "<td>NEW EASTON EA70 +/- 6 DEGREE ROAD STEM(100 MM TRAVEL)</td>" +
+                                    "<td><input type=\"number\" name=\"\" class=\"form-control\" /></td>" +
+                                    "<td><a href=\"#\"><span class=\"glyphicon glyphicon-trash\" ></span></a></td>" +
+                                "</tr>");
+                 
+                });
+
 
                 /*開啟進貨頁*/
-                function Selectimport() {
-                    window.open('import.html', '_blank', 'toolbar=no,scrollbars=yes,resizeable=no,width=1000,height=850,screenX=100,screenY=100');
+                function Choose() {
+                    window.open('group_create_choose.aspx', '_blank', 'toolbar=no,scrollbars=yes,resizeable=no,width=1000,height=850,screenX=100,screenY=100');
                 }
     </script>
 </body>
