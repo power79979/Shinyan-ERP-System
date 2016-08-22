@@ -54,7 +54,7 @@
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
                         
@@ -69,7 +69,8 @@
                         </div>
 
                         <!-- 搜尋 -->
-                        <div class="row panel panel-primary">
+                        <form action="product_list.aspx" method="get">
+                            <div class="row panel panel-primary">
                             <div class="panel-heading">
                                 <h3 class="panel-title">搜尋</h3>
                             </div>
@@ -84,73 +85,73 @@
                                             <ul class="dropdown-menu" role="menu">
                                                 <li><a href="#name">品名</a></li>
                                                 <li><a href="#brand">廠牌</a></li>
-                                                <li><a href="#sku">SKU</a></li>
+                                                <li><a href="#p_id">SKU</a></li>
                                                 <li><a href="#category">產品類型</a></li>
                                             </ul>
                                         </div>
-                                        <input type="hidden" name="search_param" value="all" id="search_param"/>
-                                        <input type="text" class="form-control" name="x" placeholder="關鍵字"/>
+                                        <input type="hidden" name="search_param" value="name" id="search_param" />
+                                        <input type="text" class="form-control" name="keyword" placeholder="關鍵字" />
                                         <span class="input-group-btn">
-                                            <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-search"></span>搜尋</button>
+                                            <button class="btn btn-primary" type="submit" value="submit"><span class="glyphicon glyphicon-search"></span>搜尋</button>
                                         </span>
                                     </div>
                                 </div>
-                            </div>                            
-                            
-                            <!-- 進階搜尋 -->
-                            <button class="btn btn-link" data-toggle="collapse" data-target="#advanced-search">進階搜尋</button>
+                            </div>
 
-                            <div id="advanced-search" class="collapse">                            
-                                <div class="container">
-                                    <form>
+                            <!-- 進階搜尋 -->
+                            <button class="btn btn-link" data-toggle="collapse" data-target="#advanced-search" type="button">進階搜尋</button>
+
+                            <div id="advanced-search" class="collapse">
+                                <div class="container-fluid">
                                     <div class="form-group col-lg-4 well">
-                                        <label>進貨日期</label><br />
-                                        從<input type="date" class="form-control"/>
-                                        到<input type="date" class="form-control"/>
+                                        <label>Owner</label>
+                                        <select name="owner">
+                                            <option></option>
+                                            <option value="E">E</option>
+                                            <option value="J">J</option>
+                                        </select>
+                                        <label>廠牌</label>
+                                        <input class="form-control" name="brand"/>
+                                        SKU
+                                        <input class="form-control" name="p_id"/>
                                     </div>
                                     <div class="form-group col-lg-4 well">
                                         <label>分類</label><br />
-                                        <select>
-                                            <option>大類</option>
-                                            <option>s</option>
-                                            <option>s</option>
-                                        </select>
-                                        <br />
-                                        <select>
-                                            <option>中類</option>
-                                            <option>s</option>
+                                        <select name="cateL">
+                                            <option value="">大類</option>
+                                            <option value="1">s</option>
                                             <option>s</option>
                                         </select>
                                         <br />
-                                        <select>
-                                            <option>小類</option>
+                                        <select name="cateM">
+                                            <option value="">中類</option>
+                                            <option value="1">s</option>
                                             <option>s</option>
+                                        </select>
+                                        <br />
+                                        <select name="cateS">
+                                            <option value="">小類</option>
+                                            <option value="1">s</option>
                                             <option>s</option>
                                         </select>
                                     </div>
                                     <div class="form-group col-lg-4 well">
-                                        銷售狀態
-                                        <select>
+                                        <label>銷售狀態</label>
+                                        <select name="status">
                                             <option></option>
-                                            <option>上架</option>
-                                            <option>下架</option>
+                                            <option value="1">上架</option>
+                                            <option value="0">下架</option>
                                         </select>
-                                        規格
-                                        <input class="form-control"/>
-                                        顏色
-                                        <input class="form-control"/>
+                                        <label>規格</label>
+                                        <input class="form-control" name="spec"/>
+                                        <label>顏色</label>
+                                        <input class="form-control" name="color"/>
                                     </div>
-                                    <div class="form-group col-lg-2">
-                                        
-                                    </div>
-                                    <div class="form-group col-lg-2">
-                                        
-                                    </div>
-                                </form>
                                 </div>
                             </div>
 
                         </div>
+                        </form>
                         <!--搜尋列結束-->
 
                         <!-- 列表 -->

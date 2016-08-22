@@ -145,4 +145,11 @@ public class ProductFactory
         DataView dv = df.get("select count(*) from product");
         return (int)dv.Table.Rows[0][0];
     }
+
+    public static int count(string condition)
+    {
+        DataFactory df = new DataFactory();
+        DataView dv = df.get("select count(*) from product " + condition);
+        return (int)dv.Table.Rows[0][0];
+    }
 }

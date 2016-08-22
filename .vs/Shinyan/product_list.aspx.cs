@@ -12,26 +12,26 @@ public partial class product_list : System.Web.UI.Page
     Product[] products;
 
     int pageIdx = 1;
-    string name = "";
+    string condition = "";
 
     protected void Page_Load(object sender, EventArgs e)
     {
         //頁數
-        if (Request.Params["page"] != null)
+        if (Request["page"] != null)
         {
-            pageIdx = Convert.ToInt32(Request.Params["page"]);
+            pageIdx = Convert.ToInt32(Request["page"]);
         }
 
         //搜尋條件
-        if (Request.Params["name"] != null)
+        if (Request["search_param"] != null && Request["keyword"] != null)
         {
-            string condition = "where ";
-            condition += "name = " + name;
+            condition = "where ";
+            condition += Request["search_param"] + " LIKE '%" + Request["keyword"] + "%'";
             products = ProductFactory.get((pageIdx - 1) * 10, 10, condition);
         }
         else
         {
-            products = ProductFactory.getRange((pageIdx-1) * 10, 10);
+            products = ProductFactory.getRange((pageIdx - 1) * 10, 10);
         }
     }
     public void printProductList()
@@ -70,19 +70,20 @@ public partial class product_list : System.Web.UI.Page
 
     public void PrintPagination()
     {
-        int pageNum = ProductFactory.count()/10;  //this one is wrong
+        int pageNum = ProductFactory.count((condition != "")?condition:"")/10;
         string result = "";
         result += "<ul class=\"pagination\">";
-
+        var s = System.Web.HttpUtility.ParseQueryString(Request.QueryString.ToString());
+        s.Remove("page");
         for (int i = 1; i <= pageNum; i++)
         {
             if (i == pageIdx)
             {
-                result += "<li class=\"active\">" + "<a href=\"#\">"+i+"</a>" + "</li>";
+                result += "<li class=\"active\">" + "<a href=\"#\">" + i + "</a>" + "</li>";
             }
             else
             {
-                result += "<li><a href=\"/product_list.aspx?page=" + i + "\">" + i + "</a></li>";
+                result += "<li><a href=\"/product_list.aspx?page=" + i + "&"+s+"\">" + i + "</a></li>";
             }
         }
 
