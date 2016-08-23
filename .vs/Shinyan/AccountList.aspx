@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="OrderProcessing.aspx.cs" Inherits="OrderProcessing" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AccountList.aspx.cs" Inherits="AccountList" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -84,10 +84,9 @@
                                                 <span id="search_concept">--請選擇--</span> <span class="caret"></span>
                                             </button>
                                             <ul class="dropdown-menu" role="menu">
-                                                <li><a href="#name">商品名稱</a></li>
-                                                <li><a href="#brand">客戶帳號</a></li>
-                                                <li><a href="#sku">客戶姓名</a></li>
-                                                <li><a href="#category">運費</a></li>
+                                                <li><a href="#name">帳號名稱</a></li>
+                                                <li><a href="#name">擁有者</a></li>
+                                                <li><a href="#brand">權限</a></li>                                             
                                             </ul>
                                         </div>
                                         <input type="hidden" name="search_param" value="all" id="search_param"/>
@@ -97,73 +96,8 @@
                                         </span>
                                     </div>
                                 </div>
-                            </div>                            
-                            
-                            <!-- 進階搜尋 -->
-                            <button class="btn btn-link" data-toggle="collapse" data-target="#advanced-search">進階搜尋</button>
-
-                            <div id="advanced-search" class="collapse">                            
-                                <form>
-                                    <div class="form-group col-lg-3 well">
-                                        <label>付款日期</label><br />
-                                        從<input type="date" class="form-control"/>
-                                        到<input type="date" class="form-control"/>
-                                        <label>出貨日期</label><br />
-                                        從<input type="date" class="form-control"/>
-                                        到<input type="date" class="form-control"/>
-                                    </div>
-                                    <div class="form-group col-lg-4 well">
-                                        <label>ebay Account</label><br />
-                                        <select>
-                                            <option>--請選擇--</option>
-                                            <option>Perter01245</option>
-                                            <option>marco13245</option>
-                                        </select> 
-                                        出貨編號:
-                                        <input class="form-control"/>
-                                        表單確認編碼:
-                                        <input class="form-control"/>
-                                        Transaction ID:
-                                        <input class="form-control"/>                            
-                                    </div>
-                                    <div class="form-group col-lg-4 well">
-                                        合併訂單:  <br/>                                 
-                                       <label class="radio-inline">
-                                            <input type="radio" name="optradio" value="" />已合併訂單</label>
-                                       <label class="radio-inline">
-                                            <input type="radio" name="optradio" value="" />合併成的新訂單</label>
-                                        <br/>
-                                    
-                                  
-                                        物流配送方式: <br/>                                  
-                                       <label class="radio-inline">
-                                            <input type="radio" name="optradio" value="" />EMS</label>
-                                       <label class="radio-inline">
-                                            <input type="radio" name="optradio" value="" />Fedex</label>
-                                        <label class="radio-inline">
-                                            <input type="radio" name="optradio" value="" />DHL</label>
-                                        <label class="radio-inline">
-                                            <input type="radio" name="optradio" value="" />TNT</label>
-                                        <br/>
-                                        <label class="radio-inline">
-                                            <input type="radio" name="optradio" value="" />國際包裹</label>
-                                        
-                                        <label class="radio-inline">
-                                            <input type="radio" name="optradio" value="" />其他</label>
-                                        <br/>
-                                        <label class="radio-inline">
-                                            <input type="radio" name="optradio" value="" />USPS(集貨)高雄</label>
-                                        <label class="radio-inline">
-                                            <input type="radio" name="optradio" value="" />USPS(寄倉)扣美國倉</label>
-                                    </div>
-                                    <div class="form-group col-lg-2">
-                                        
-                                    </div>
-                                    <div class="form-group col-lg-2">
-                                        
-                                    </div>
-                                </form>
-                            </div>
+                            </div>                           
+                    
 
                         </div>
                         <!--搜尋列結束-->
@@ -175,69 +109,52 @@
                                 <table class="table table-striped custab">
                                     <thead>
                                         <tr>
-                                            <th>訂單編號</th>
-                                            <th>平台</th>
-                                            <th>Ebay Account</th>
-                                            <th>客戶帳號</th>
-                                            <th>購買日期</th>
-                                            <th>付款日期</th>
-                                            <th>物流狀態</th>
-                                            <th>訂單狀態</th>
-                                            <th>總金額</th>
-                                            <th>操作者</th>
+                                            <th>帳號名稱</th>
+                                            <th>擁有者</th>
+                                            <th>權限等級</th>
+                                            <th>帳號開創日期</th>
+                                            <th>最近修改日期</th>
+                                            <th>開通否</th>                                            
                                             <th class="text-center">Action</th>
                                         </tr>
                                     </thead>
                                     <tr>
-                                        <td>EF0818N0010</td>
-                                        <td>ebay</td>
-                                        <td>huangbowei</td>
-                                        <td>PridgenLogan</td>
+                                        <td>A123456</td>
+                                        <td>Boss</td>
+                                        <td>A</td>                                        
                                         <td>2016-08-17</td>
-                                        <td>2016-08-17 13:02:51</td>
-                                        <td>DHL</td>
-                                        <td>處理中</td>
-                                        <td>200 USD</td>
-                                        <td>huangbowei0123</td>
+                                        <td>2016-08-17 13:02:51</td> 
+                                        <td>是</td>                                      
                                         <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> 編輯</a> <a href="#" onclick="Selectimport()" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-import"></span> 刪除</a></td>
                                     </tr>
                                     <tr>
-                                       <td>EF0818N0010</td>
-                                        <td>ebay</td>
-                                        <td>huangbowei</td>
-                                        <td>PridgenLogan</td>
+                                        <td>B123456</td>
+                                        <td>OP1</td>
+                                        <td>B</td>                                        
                                         <td>2016-08-17</td>
-                                        <td>2016-08-17 13:02:51</td>
-                                        <td>DHL</td>
-                                        <td>處理中</td>
-                                        <td>200 USD</td>
-                                        <td>huangbowei0123</td>
+                                        <td>2016-08-17 13:02:51</td> 
+                                        <td>是</td>   
+                                        
                                         <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> 編輯</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-import"></span> 刪除</a></td>
                                     </tr>
                                     <tr>
-                                       <td>EF0818N0010</td>
-                                        <td>ebay</td>
-                                        <td>huangbowei</td>
-                                        <td>PridgenLogan</td>
+                                        <td>C123456</td>
+                                        <td>OP2</td>
+                                        <td>B</td>                                        
                                         <td>2016-08-17</td>
-                                        <td>2016-08-17 13:02:51</td>
-                                        <td>DHL</td>
-                                        <td>處理中</td>
-                                        <td>200 USD</td>
-                                        <td>huangbowei0123</td>
+                                        <td>2016-08-17 13:02:51</td> 
+                                        <td>否</td>   
+                                      
                                         <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> 編輯</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-import"></span> 刪除</a></td>
                                     </tr>
                                     <tr>
-                                        <td>EF0818N0010</td>
-                                        <td>ebay</td>
-                                        <td>huangbowei</td>
-                                        <td>PridgenLogan</td>
+                                        <td>D123456</td>
+                                        <td>OP3</td>
+                                        <td>C</td>                                        
                                         <td>2016-08-17</td>
-                                        <td>2016-08-17 13:02:51</td>
-                                        <td>DHL</td>
-                                        <td>處理中</td>
-                                        <td>200 USD</td>
-                                        <td>huangbowei0123</td>
+                                        <td>2016-08-17 13:02:51</td> 
+                                        <td>是</td>   
+                                       
                                         <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> 編輯</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-import"></span> 刪除</a></td>
                                     </tr>
                                 </table>
